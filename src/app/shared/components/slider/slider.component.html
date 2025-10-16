@@ -1,0 +1,16 @@
+<div class="relative">
+  <div (scroll)="onScroll()" [class.justify-center]="!hasScroll()" class="overflow-x-auto scroll-smooth flex gap-5 py-1"
+    #slider>
+    <ng-content />
+  </div>
+  @if (hasScroll()) {
+  <button (click)="scrollLeft()" [class.hidden]="isBtnLeftDisabled()"
+    class="absolute top-1/2 start-4 -translate-y-1/2 btn-secondary-icon rounded-full size-10">
+    <app-icons icon="arrow-left" />
+  </button>
+  <button (click)="scrollRight()" [class.hidden]="isBtnRightDisabled()"
+    class="absolute top-1/2 end-4 -translate-y-1/2 btn-secondary-icon rounded-full size-10">
+    <app-icons icon="arrow-right" />
+  </button>
+  }
+</div>

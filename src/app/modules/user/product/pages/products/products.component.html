@@ -1,0 +1,29 @@
+<section class="grid grid-cols-12 gap-6">
+  <div class="hidden md:block md:col-span-3 xl:col-span-2">
+    <app-filter />
+  </div>
+
+  <div class="col-span-12 md:col-span-9 xl:col-span-10">
+    <div class="py-10 px-2 bg-brand-light mb-8 rounded-lg flex flex-col items-center gap-4">
+      <app-main-header header="Design Your Own"
+        description="Create your personalized look — upload your image, pick your colors, and make it truly yours." />
+      <app-button btnName="Start Designing" />
+    </div>
+
+    <div class="flex justify-between">
+      <h2 class="text-2xl sm:text-3xl mb-2 font-bold text-dark">All products</h2>
+    </div>
+
+    <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-5">
+      @for (product of times | paginate: { itemsPerPage: 15, currentPage: p }; track $index) {
+      <app-product-card [isFixedWidth]="false" />
+      }
+    </div>
+
+    <div class="flex justify-center mt-8">
+      <pagination-controls [responsive]="true" [maxSize]="9" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+
+</section>

@@ -1,0 +1,13 @@
+.popup {
+  animation: "popup-scale" 0.2s ease-in-out;
+}
+
+@keyframes popup-scale {
+  from {
+    transform: scale(0.7);
+    /* transform: ; */
+  }
+  to {
+    transform: scale(1);
+  }
+}

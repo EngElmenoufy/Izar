@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Stitch Design</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            display: ["Plus Jakarta Sans"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            lg: "1rem",
+            xl: "1.5rem",
+            full: "9999px"
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <header
+      class="sticky top-0 z-10 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+      <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4">
+          <div class="text-brand h-8 w-8">
+            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd"
+                d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                fill="currentColor" fill-rule="evenodd"></path>
+              <path clip-rule="evenodd"
+                d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+                fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-gray-900 dark:text-white">Printify</h2>
+        </div>
+        <nav class="hidden items-center gap-8 lg:flex">
+          <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand dark:hover:text-primary"
+            href="#">Men</a>
+          <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand dark:hover:text-primary"
+            href="#">Women</a>
+          <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand dark:hover:text-primary"
+            href="#">Kids</a>
+          <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand dark:hover:text-primary"
+            href="#">Accessories</a>
+          <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand dark:hover:text-primary"
+            href="#">Sale</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button
+            class="hidden rounded-full bg-gray-200 px-4 py-2 text-sm font-bold text-gray-800 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 sm:block">Sign
+            in</button>
+          <button
+            class="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-gray-200/50 dark:text-gray-300 dark:hover:bg-gray-700/50">
+            <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+              </path>
+            </svg>
+          </button>
+          <button
+            class="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-gray-200/50 dark:text-gray-300 dark:hover:bg-gray-700/50">
+            <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <div class="relative w-full">
+        <div class="relative h-[600px] w-full">
+          <img alt="Wide banner with a male model wearing a custom t-shirt"
+            class="h-full w-full object-cover object-center"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe09i5dEtHWkvLp02lKknG1R1vULlwd_bKEySo30UrkMBRaM7lG9-87OalpYngnA74caqeVctaXa1QF7j9tPyFPo6FRF83Ezbu8uXtW9o7X2WOlrlD56GmoxLVRpdrNV-_iDFM_srEx14D3S2HxTBjKiD0qbABgeMd244gcHIeeybD9j_X_AUC-WxCY8RTP96QVfW7Swux_fvmWKJ0-uCOUeNlhfYH8wfytDiqnQ1KeQLLp5uMc3xKQGYtaoyWWxZxzGa30vy9XKU" />
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid items-center gap-8 lg:grid-cols-2">
+              <div class="flex flex-col items-center gap-4 text-center text-white lg:items-start lg:text-left">
+                <h1 class="text-4xl font-extrabold leading-tight tracking-tighter sm:text-5xl md:text-6xl">Wear Your
+                  Story</h1>
+                <p class="max-w-xl text-base text-gray-200 sm:text-lg">Transform your ideas into wearable art. Create
+                  custom t-shirts with your designs, photos, or text.</p>
+                <div class="mt-4 flex flex-col flex-wrap justify-center gap-3 sm:flex-row lg:justify-start">
+                  <button
+                    class="rounded-full bg-brand px-6 py-3 text-base font-bold text-white shadow-lg transition-transform hover:scale-105">Design
+                    Your Own</button>
+                  <button
+                    class="rounded-full bg-white/20 px-6 py-3 text-base font-bold text-white shadow-lg backdrop-blur-sm transition-transform hover:scale-105">Explore
+                    Designs</button>
+                </div>
+              </div>
+              <div class="relative hidden h-[600px] w-full items-center justify-center lg:flex">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="py-16 sm:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Our Process</h2>
+            <p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-400">Bringing your ideas to life is simple.
+              Follow our easy three-step process to create your own custom t-shirt.</p>
+          </div>
+          <div class="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col items-center text-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 16a4 4 0 01-4-4V6a2 2 0 012-2h10a2 2 0 012 2v6a4 4 0 01-4 4H7z" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M16 16v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16-4l-4-4m0 0l-4 4m4-4v12" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <h3 class="mt-6 text-lg font-semibold text-gray-900 dark:text-white">1. Upload Your Design</h3>
+              <p class="mt-2 text-base text-gray-600 dark:text-gray-400">Start by uploading your own image, logo, or
+                artwork. Our tool supports various file formats.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <h3 class="mt-6 text-lg font-semibold text-gray-900 dark:text-white">2. Choose Your T-Shirt</h3>
+              <p class="mt-2 text-base text-gray-600 dark:text-gray-400">Select from a wide range of colors, sizes, and
+                styles to find the perfect t-shirt for your design.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <h3 class="mt-6 text-lg font-semibold text-gray-900 dark:text-white">3. Add to Cart</h3>
+              <p class="mt-2 text-base text-gray-600 dark:text-gray-400">Review your design, add it to your cart, and
+                check out. We'll handle the rest and deliver it to you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-background-light dark:bg-background-dark py-16 sm:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Customer Showcase
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-400">See what our creative customers have
+              designed. Get inspired by their unique creations!</p>
+          </div>
+          <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <div class="group relative overflow-hidden rounded-lg">
+              <img alt="Customer wearing a custom t-shirt with a cool graphic."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSsT85y0TrApgGX52Cyy8DA81uLGHzZ82qjZJq040ozegkzoQBpSZcZmycbv5lKRU2KJc6wmRGOadGaUtp26DISR4VwyEBjc-iB0QtlY5AQ_JOeNqPAGkLOsziTghOkKxQL5WDgIHD_Xo9PnmjHZIHpgG_BfCFRUi1ODAswGB5lZtE_-rHyU9cqDxABDIPu22plS_mjifjm7knEazZetgggdbDWwNDLqiJq27bTXAlJA9q8_ncSFzZPT1z5R1tGPOv3DENAZTqlis" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg">
+              <img alt="Customer wearing a t-shirt with a funny quote."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuALl_wE91N-5_dgFICnmJN2U1EvO22i1WB3X8ouZDb-8pogPUJeOEIjMFCCi4NelOCpjDN1fd8Iq2P7tmwpacHQTehUDEZSTe1dodAEsZij29se0cuW7vUlKMURSrx-StdkORimKrxXwG_pLyp_g0RyLckNwCUnm1OxwWDd-rvudAq5rNTZPOUd8GVpQIXQua58z3EGiIbZUI371HWrNj44DefrgrjXlc_EWmbb1N2VlFsWmfOzcodYNQ7l6b9qY0drUCmt9oPrrV0" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg">
+              <img alt="A group of friends wearing matching custom t-shirts."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYD74AW_AwbHgUAqHaM5GQpd26zKZYqetb7q-qIXWkdpLQYz2gy1EuIvEy6PM4uwatOwayPV1T5UGELows7HV4-mhpujT6ltVks30avWw7KZVVQWt56XOis9RmY0n4wfd1cgV_AOAjzd52IsbC8Bj8O4Sfjslx-flaVC57Il1NElKKva1s-am4MSGnLwFzYJUp8BvTV2-L-5j-EGVJNf6rmxuCb-18n2BtIp7UnFH3G-AGkKss_4vIQ7gBVnbwMIi_0mVxdIr-e4U" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg">
+              <img alt="A user-submitted photo of a custom pet portrait t-shirt."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4sj7MrqcDQlOFT10EPLUDscXz4An5gLbQoS8WFfmpqrn7xvHL68nnKgz8v5KtbvFAs0bwl06O283JuAbzrr3_J1Q5KW5DdIVALTsGGotexSNXMKIHREp4pa7rswctsff1Gwi7zj2B7cuI48yBctv38UNOOWitfVbunhqLeFLK7azTi8MTpRlBfqQ2U53Nw5gDcQ80t4v9jzeQdXsWt-qfA3VS1yibrDaaCQ9OFiwYEdaJ_Q9tpI3Pi0bNbOJsyU0WAKaFfyYEMRk" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative hidden overflow-hidden rounded-lg sm:block">
+              <img alt="A customer showcasing their artistic t-shirt design."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMbvVQFUhcAsf-nL3WSMICpJcZgYABcHVQROwYKSgKb8-6I3l2jWajpS9eJ_ZFWXVC4LuK5FAkG0-MELMYsnlQKccy1QPpvMO-IBsAZhyGoCppWWJkOOELd2ZxB99XOALDWCHr-OwMdOjaFGIFKtO14Gg-x3rwaqQJl_nlzLrACAu0BzTV5j-ZJZKPz1Xubqz5xHUvHjrpu1LdPwOEmg3Awd3acczdCzHwIGUK37dk1ZB8pH2S69YDfPr7GkQSWibkiNgwIdUzsVw" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative hidden overflow-hidden rounded-lg md:block">
+              <img alt="A t-shirt with a band logo designed by a customer."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUXYsYxSwzFRwMaMihvvcj2MRvcybgr-zcsG79t9-6ztBHO7aT9ztLv0W0xM_Yq6g8kfuUF4UsHzgwGEwyiIkaz-eGSjV1SkCt_xUJ47O4BHSUQpYqa7fiXvYvFAFtYdAjsA7jzeHTEe5P3tIEyN2x__SyQ8J0io5EFijqmrSyfb6QEYzgi2Jn4bNW3J0oqo99tausE5CRsic5VFnN1wvCitEUhKkWRTbHPCcmY88WwPtOWgi4no6ywfkUxmf-gEWBDms7z7l_nho" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative hidden overflow-hidden rounded-lg md:block">
+              <img alt="A family wearing custom t-shirts for a special occasion."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChG5GttbolABKa6AILNPosl_R8ZMx5QuohRVroMvuMZDd2k-ch5AWvh6n9s7OflsAtlhYBxvq5aSu8MK4Htopwu__Os4hA9lHOP40nLj_k7tLonpGNcqb72gClsLwtpklUMc-pE1GyUk6Rytux3HJklRvjFyamjSCzbUl7lcGKBmC4crS4GYvjFFsCUyXArcld6iLqV1KZMQfUU6Kf3sBb2hlntmPX5eEjx3XxFT0qM-gVlVQnCaMxsM3lYjCRpvSH1wvLFjKlsBA" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative hidden overflow-hidden rounded-lg lg:block">
+              <img alt="A custom t-shirt with a vintage-style travel poster design."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5D2FvDmL62u9xyTBpL4NL-tNRBHxNG3I-lpKd7DZbmMa1DXQtXbDJjk-xHB8Eat_igPQv9a7EPEf-AKZuBjzejXlA3b-rpYj2gCifjcC1QjBodU9w6Yw-1rohTBPK6AENvGD26T3PhWjvIzQoZNCyP7lJIgkAysWrPx0_Dqw4N2tcxFu8aXGtI0b7PKgNKQt806rRZBfWQNixxIAu2ml1VW7q0bR_wYOea-cBKPcjTHs5HuMcaTab5ikTZsDHagXWuTQYvEfmUaA" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative hidden overflow-hidden rounded-lg lg:block">
+              <img alt="A customer-designed t-shirt for a charity event."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZOMR3hJ6uy9wKIBBYUOzdcahusz7mOxTau03VflcKuvYJMmufD1l8KYYM0pX0MdeHim2mUMNEfSPMpEXc15tGPtvDI88T9guXLhlu7IYeU5F1DGH_YdVCAqJ9qTcGueeoTmelkc8_hCGlf8yc04vb5OEqSRUh6rRp7dHKtNh93aJTYsCgTcyzOBYtl5ITm_pPElLFap18GgwlN-TExIURmX1zSzGsZimGwwUvyopCfCTINQRlhnfsb8JPv4BaWmxVpUdU-vEy_6Y" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+            <div class="group relative hidden overflow-hidden rounded-lg lg:block">
+              <img alt="A minimalist design t-shirt created by a user."
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE_5vGc8b2o7s55QdslD_j7nUuoHM1MKGS3JYYLPxR-9PTo2VnoB5tXPK6_w51DmJQQ_lY8Er8f2nuA67NVmU_Aj-B1u6--SpFAWnP1WEtvXsF27ogusIc-t1yJe5Jzgp5xmOcGKKB7zEumTfrNigpmLAKKqtAvWQtObdgVCkkyY9Ljr3bviKc5nCEdjZ3zIjNXfhOM5xkY6Lzyq-hGhlEH0PyKCgEPtPtPf8MjCuryHnNRtTmDg7XOSJS5EVARVl6VraTCOSvt0E" />
+              <div class="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary/90 dark:bg-primary/90 py-16 sm:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to Start Designing?</h2>
+            <p class="mt-4 text-lg leading-8 text-gray-100">Unleash your creativity and make a t-shirt that's uniquely
+              yours. It's time to wear your imagination.</p>
+            <div class="mt-8">
+              <button
+                class="rounded-full bg-white px-8 py-3 text-base font-bold text-brand shadow-lg transition-transform hover:scale-105">Get
+                Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="border-t border-gray-200/50 dark:border-gray-700/50">
+      <div class="container mx-auto px-4 py-10 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div class="flex items-center gap-4">
+              <div class="text-brand h-8 w-8">
+                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd"
+                    d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                    fill="currentColor" fill-rule="evenodd"></path>
+                  <path clip-rule="evenodd"
+                    d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+                    fill="currentColor" fill-rule="evenodd"></path>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white">Printify</h2>
+            </div>
+            <p class="mt-4 text-base text-gray-600 dark:text-gray-400">Your vision, our canvas. High-quality custom
+              t-shirt printing.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-2">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Company</h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">About</a>
+                </li>
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">Careers</a>
+                </li>
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Support</h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">Contact Us</a>
+                </li>
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">FAQ</a>
+                </li>
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">Shipping</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Legal</h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">Terms of Service</a>
+                </li>
+                <li>
+                  <a class="text-base text-gray-600 hover:text-brand dark:text-gray-400 dark:hover:text-primary"
+                    href="#">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 border-t border-gray-200/50 pt-8 dark:border-gray-700/50 md:flex md:items-center md:justify-between">
+          <div class="flex justify-center space-x-6 md:order-2">
+            <a class="text-gray-500 hover:text-brand dark:text-gray-400 dark:hover:text-primary" href="#">
+              <span class="sr-only">Twitter</span>
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                </path>
+              </svg>
+            </a>
+            <a class="text-gray-500 hover:text-brand dark:text-gray-400 dark:hover:text-primary" href="#">
+              <span class="sr-only">Facebook</span>
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path clip-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </a>
+            <a class="text-gray-500 hover:text-brand dark:text-gray-400 dark:hover:text-primary" href="#">
+              <span class="sr-only">Instagram</span>
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm.825 6.985a.75.75 0 00-1.65 0v2.265a.75.75 0 001.65 0V8.985zM12 15.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
+                  fill-rule="evenodd"></path>
+                <path d="M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </a>
+          </div>
+          <p class="mt-8 text-center text-base text-gray-500 dark:text-gray-400 md:order-1 md:mt-0">© 2024 Printify. All
+            rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

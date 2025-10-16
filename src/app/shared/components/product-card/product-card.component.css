@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.discount {
+  transform: scale(1);
+  animation: scaleup 1.5s infinite alternate-reverse;
+}
+
+@keyframes scaleup {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}

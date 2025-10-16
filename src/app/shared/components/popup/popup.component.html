@@ -1,0 +1,9 @@
+@if (isOpened()) {
+<div
+  class="popup absolute z-20 top-[120%] start-0 md:start-1/2 md:-translate-x-1/2 bg-white rounded-lg overflow-hidden max-h-96 overflow-y-auto">
+  <ng-content select="[header]" />
+  <ul>
+    <ng-content />
+  </ul>
+</div>
+}

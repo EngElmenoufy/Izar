@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* @theme {
+  --color-primary: #0069a8;
+  --color-primary-dark: #00598a;
+  --color-primary-light: #f0f9ff;
+  --color-accent: #fdf8f5;
+  --color-dark: #0e150e;
+  --color-gray: #99a1af;
+  --color-gray-light: #d1d5dc;
+} */
+
+@theme {
+  /* Brand */
+  --color-brand: #0077c2;
+  --color-brand-hover: #005e99;
+  --color-brand-light: #f0f9ff;
+
+  /* Neutrals */
+  --color-dark: #0e150e;
+  --color-muted: #6b7280;
+  --color-line: #e2e8f0;
+  --color-light: #f8fafc;
+
+  /* Accent (optional) */
+  --color-accent: #f97316; /* or teal / purple if preferred */
+  --color-accent-light: #fff5eb;
+
+  /* --color-accent: #0d9488;
+  --color-accent-light: #e6f8f6; */
+
+  /* Semantic states */
+  --color-success: #16a34a;
+  --color-success-bg: #e8f7ef;
+
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fff8e5;
+
+  --color-error: #dc2626;
+  --color-error-bg: #fdecea;
+
+  --color-info: #3b82f6;
+  --color-info-bg: #eaf3ff;
+
+  --default-transition-duration: 0.2s;
+  --breakpoint-xs: 31.25rem;
+}
+
+@layer components {
+  .btn-icon {
+    @apply relative cursor-pointer block z-10 font-semibold after:-z-10 p-2 after:content-[''] after:absolute after:top-0 after:start-0 after:w-full after:h-full hover:after:bg-gray-100 after:scale-75 after:transition-all after:rounded-xl hover:after:scale-100;
+  }
+
+  .btn-icon-active {
+    @apply after:bg-gray-100 after:scale-100;
+  }
+
+  .btn-icon-label {
+    @apply whitespace-nowrap translate-y-1/4 pointer-events-none transition-all -scale-50 p-2 opacity-0 bg-white absolute top-[120%] rounded-2xl;
+  }
+
+  a .btn-icon-label {
+    @apply start-1/2 -translate-x-1/2;
+  }
+
+  button .btn-icon-label {
+    @apply right-0;
+  }
+
+  .btn-icon:hover .btn-icon-label {
+    @apply translate-y-0 block opacity-100 scale-100;
+  }
+
+  .btn-secondary-icon {
+    @apply cursor-pointer transition-colors p-1 bg-white hover:bg-gray-100 shadow-lg hover:shadow-xl rounded-xl;
+  }
+
+  .btn {
+    @apply bg-brand text-white py-2 px-4 cursor-pointer rounded-xl transition-all hover:bg-brand-hover hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-800 border border-gray-300 hover:bg-gray-200 px-4 py-2 rounded-xl transition cursor-pointer hover:shadow-lg;
+  }
+
+  .btn-danger {
+    @apply bg-red-50 text-red-700 border border-red-200 hover:bg-red-100 px-4 py-2 rounded-xl transition cursor-pointer hover:shadow-lg;
+  }
+
+  .input {
+    @apply block w-full placeholder:text-gray-500 rounded-lg p-2 border border-gray-400 focus:shadow-[0_0_2px_#0069a8] focus:border-transparent outline-0;
+  }
+
+  .form {
+    @apply max-w-[736px] md:mx-auto shadow-lg border bg-white border-gray-200 rounded-lg;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  @apply text-dark bg-white;
+}
+
+/* main {
+  @apply py-4 px-3 sm:px-4 md:px-6;
+} */
+
+.form h2 {
+  @apply text-3xl font-bold text-center py-3 border-b border-gray-200;
+}
+
+.form form {
+  @apply p-4;
+}
+
+.ngx-pagination .current {
+  @apply !bg-brand rounded-full;
+}
+
+.ngx-pagination a:hover {
+  @apply !bg-background rounded-full;
+}

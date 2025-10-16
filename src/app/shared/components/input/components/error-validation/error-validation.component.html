@@ -1,0 +1,34 @@
+@if (control().touched) {
+<div class="bg-red-50 mt-2 text-sm text-red-800 rounded-lg">
+  @if (control().getError('email')) {
+  <span class="block p-2">
+    Please enter a valid email address (e.g. name&#64;example.com).
+  </span>
+  }
+
+  @if (control().getError('required')) {
+  <span class="block p-2">
+    {{label() | titlecase}} is required.
+  </span>
+  }
+
+  @if (control().getError('minlength')) {
+  <span class="block p-2">
+    {{label() | titlecase}} must be at least 3 characters long.
+  </span>
+  }
+
+  @if (control().getError('pattern')) {
+  <span class="block p-2">
+    Password must be at least 8 characters and include an uppercase letter, a lowercase letter, a number, and a special
+    character.
+  </span>
+  }
+
+  @if (control().getError('mismatch')) {
+  <span class="block p-2">
+    Passwords do not match.
+  </span>
+  }
+</div>
+}

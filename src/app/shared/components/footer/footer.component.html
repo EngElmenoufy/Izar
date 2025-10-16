@@ -1,0 +1,20 @@
+<section class="bg-[#202229] text-white pt-10 pb-2 px-5">
+  <div class="grid gap-5 xs:grid-cols-2 md:grid-cols-3 max-w-[1200px] mx-auto pb-7 border-b border-gray-100/50">
+    @for (item of footerItems; track $index) {
+    <div>
+      <h5 class="mb-3 text-xl font-bold">{{item.header}}</h5>
+      <ul class="text-[#ccc] ps-2 flex flex-col gap-1.5">
+        @for (link of item.links; track $index) {
+        <li><a class="hover:text-white transition-colors" routerLink="/">{{link}}</a></li>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+
+  <div class="max-w-[1200px] mx-auto pt-2">
+    <div class="w-16">
+      <img src="/images/logo.png" class="w-full" alt="Izar Logo">
+    </div>
+  </div>
+</section>

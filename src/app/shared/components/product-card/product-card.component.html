@@ -1,0 +1,38 @@
+<div (click)="onOpenOrFavorite($event)" [class]="isFixedWidth() ? 'w-52': 'w-full'"
+  class="cursor-pointer group rounded-lg overflow-hidden bg-white border border-gray-light h-full transition-shadow hover:shadow-lg">
+  <div class="relative bg-[#f8f8f9]">
+    <img src="images/categories/football.png" class="w-full h-52 object-contain" alt="product">
+
+    <button id="favorite" class="absolute top-2 end-2 btn-secondary-icon">
+      <app-icons icon="favorite-empty" />
+    </button>
+
+    <button id="cart" class="absolute bottom-2 end-2 btn-secondary-icon">
+      <app-icons icon="add-cart" />
+    </button>
+    <span
+      class="discount font-semibold shadow-lg cursor-default absolute top-2.5 start-3 text-sm text-white bg-gradient-to-br from-[#ff6b6b] to-[#ee5a6f] block rounded-full px-2 py-1">5%
+      off</span>
+  </div>
+
+  <div class="p-2" title="product">
+
+    <app-product-colors [colors]="productColors" />
+
+    <p class="text-sm uppercase tracking-wider text-gray-400">category</p>
+
+    <h4 class="text-lg font-bold line-clamp-1">product</h4>
+
+    <app-stars [rating]="4" [totalReviews]="2" />
+
+    <div class="flex gap-3 flex-wrap items-center mt-2">
+      <span class="text-[#333] text-xl font-bold line-clamp-1">{{190 |
+        currency:'GBP'}}</span>
+      @if (true){
+      <span class="text-gray-500 line-through text-sm">{{200 | currency:'GBP'}}</span>
+      }
+    </div>
+
+    <!-- <app-button btnName="Add To Cart" additionalClass="w-full mt-2" /> -->
+  </div>
+</div>

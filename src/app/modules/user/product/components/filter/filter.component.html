@@ -1,0 +1,77 @@
+<form [formGroup]="filterForm" class="sticky top-0 py-3" (ngSubmit)="onSubmit()">
+  <div class="flex gap-2">
+    <app-icons icon="filter" />
+    <h3 class="text-xl font-bold">filter</h3>
+  </div>
+
+  <app-select label="Categories" [options]="categoryOptions" formControlName="category" />
+  <app-select label="Rating" [options]="RatingsOptions" formControlName="rating" />
+
+  <div class="my-4">
+    <h5 class="font-semibold mb-2 text-gray-700">Price Range</h5>
+    <div class="flex justify-between items-center gap-2">
+      <input appOnlyNumbers type="text" placeholder="Min" class="input" formControlName="minPrice">
+      <span>-</span>
+      <input appOnlyNumbers type="text" placeholder="Max" class="input" formControlName="maxPrice">
+    </div>
+  </div>
+
+  <div class="my-4">
+    <h5 class="font-semibold mb-2 text-gray-700">Has Discount</h5>
+
+    <div class="flex items-center gap-5 mt-1">
+      <label class="flex items-center gap-2 transition-colors hover:text-brand cursor-pointer">
+        <input type="radio" name="discount" value="all" formControlName="discount"
+          class="text-brand focus:ring-brand" />
+        <span>All</span>
+      </label>
+
+      <label class="flex items-center gap-2 transition-colors hover:text-brand cursor-pointer">
+        <input type="radio" name="discount" value="yes" formControlName="discount"
+          class="text-brand focus:ring-brand" />
+        <span>Yes</span>
+      </label>
+
+      <label class="flex items-center gap-2 transition-colors hover:text-brand cursor-pointer">
+        <input type="radio" name="discount" value="no" formControlName="discount" class="text-brand focus:ring-brand" />
+        <span>No</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="my-4">
+    <h5 class="font-semibold mb-2 text-gray-700">Sizes</h5>
+
+    <div class="flex flex-wrap gap-2">
+      @for (size of sizeOptions; track $index){
+      <button type="button" (click)="toggleSize(size)" [class.bg-brand]="isSizeSelected(size)"
+        [class.text-white]="isSizeSelected(size)"
+        class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-lg text-sm font-medium transition-colors cursor-pointer">
+        {{ size }}
+      </button>
+      }
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-3 my-4">
+    <button type="button" (click)="onReset()" class="btn-danger">Clear All Filters</button>
+    <!-- <button type="submit" class="btn">Apply Filters</button> -->
+    <button type="submit" class="btn-secondary">Apply
+      Filters</button>
+  </div>
+
+  @if (activatedFilters.length) {
+  <div>
+    <h6>Active Filters:</h6>
+
+    <div class="flex flex-wrap gap-2 mt-2">
+      @for (item of activatedFilters; track $index) {
+      @if (item && item.length) {
+      <span [style.backgroundColor]="filterColors[$index].background" [style.color]="filterColors[$index].color"
+        class="py-0.5 px-1.5 text-sm rounded-xl">{{item}}</span>
+      }
+      }
+    </div>
+  </div>
+  }
+</form>

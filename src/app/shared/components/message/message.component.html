@@ -1,0 +1,19 @@
+@if (messageService.messageSignal()) {
+<div (click)="onCloseMessage()" [class]="{
+'bg-green-600': messageService.typeSignal() === 'success',
+'bg-orange-600': messageService.typeSignal() === 'wrong',
+'bg-red-600': messageService.typeSignal() === 'error',
+}" @message
+  class="fixed top-4 end-4 message text-white p-2 w-72 min-h-20 z-40 rounded-lg shadow-2xl flex items-center gap-4">
+  <span class="text-2xl font-bold">
+    @if (messageService.typeSignal() === 'success'){
+    <i class="fa-solid fa-check"></i>
+    } @else if (messageService.typeSignal() === 'error') {
+    <i class="fa-solid fa-xmark"></i>
+    } @else if (messageService.typeSignal() === 'wrong') {
+    <i class="fa-solid fa-xmark"></i>
+    }
+  </span>
+  <p class="">{{messageService.messageSignal()}}</p>
+</div>
+}

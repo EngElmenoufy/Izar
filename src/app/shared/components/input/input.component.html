@@ -1,0 +1,19 @@
+<div class="mb-4">
+  <label [for]="id()" class="block text-lg font-bold mb-1">{{label() | titlecase}}</label>
+  <div class="relative">
+    <input [type]="isShowPassword() ? 'text' : type()" [id]="id()" class="input" [name]="id()" [formControl]="control()"
+      placeholder="Enter Your {{label() | titlecase}}">
+    @if (type() === 'password') {
+    <button type="button" class="absolute top-1/2 -translate-y-1/2 end-3 cursor-pointer"
+      (click)="onToggleShowPassword()">
+      @if (!isShowPassword()) {
+      <i class="fa-solid fa-eye-slash"></i>
+      } @else {
+      <i class="fa-solid fa-eye"></i>
+      }
+    </button>
+    }
+  </div>
+
+  <app-error-validation [control]="control()" [label]="label()" />
+</div>

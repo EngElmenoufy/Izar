@@ -1,0 +1,14 @@
+<div class="flex gap-3 items-center">
+  <div class="mt-1 flex">
+    @for (_ of numOfFullStars(); track $index) {
+    <app-icons icon="star-full" color="#fdc700" />
+    }
+    @if (hasDecimal()) {
+    <app-icons icon="star-half" color="#fdc700" />
+    }
+    @for (_ of numOfEmptyStars(); track $index) {
+    <app-icons icon="star-empty" color="#fdc700" />
+    }
+  </div>
+  <span class="text-gray-500 text-xs">({{safeTotalReviews()}})</span>
+</div>

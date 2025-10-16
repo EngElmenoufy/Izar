@@ -1,0 +1,14 @@
+<section fadeAnimation class="opacity-0 translate-y-8 transition-all duration-500 py-20 my-8">
+  <app-main-header header="Explore Our Products"
+    description="Discover high-quality printed outfits designed for every passion and personality." />
+
+  <div class="flex justify-center mt-5 mb-8">
+    <button role="link" class="btn" routerLink="/products">Shop Now</button>
+  </div>
+
+  <app-slider>
+    @for (item of times; track $index) {
+    <app-product-card />
+    }
+  </app-slider>
+</section>
