@@ -1,13 +1,13 @@
 <div class="my-4 relative" appClickOutside (clickOutside)="onClose()">
   <h5 class="font-semibold mb-2 text-gray-700">{{label()}}</h5>
   <button type="button" [class.list-opened]="isOpen()" (click)="toggle()"
-    class="p-2 border border-gray-light w-full flex justify-between rounded-lg cursor-pointer">
+    class="p-2 border border-line w-full flex justify-between rounded-lg cursor-pointer">
     <span>{{selected()}}</span>
     <app-icons icon="arrow-down" />
   </button>
 
   @if (isOpen()) {
-  <ul class="absolute bg-white z-10 w-full border border-gray-light mt-1 rounded-lg shadow-lg overflow-hidden"
+  <ul class="absolute bg-white z-10 w-full border border-line mt-1 rounded-lg shadow-lg overflow-hidden"
     (click)="onSelect($event)">
     @for (option of options(); track $index) {
     <li class="p-2 transition-colors cursor-pointer hover:bg-gray-100">{{option}}</li>

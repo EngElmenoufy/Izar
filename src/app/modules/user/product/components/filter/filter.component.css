@@ -1,0 +1,20 @@
+.filter {
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .filter {
+    top: 100%;
+    animation: up 0.5s forwards;
+  }
+}
+
+@keyframes up {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 10rem;
+  }
+}

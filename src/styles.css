@@ -24,11 +24,11 @@
   --color-light: #f8fafc;
 
   /* Accent (optional) */
-  --color-accent: #f97316; /* or teal / purple if preferred */
-  --color-accent-light: #fff5eb;
+  /* --color-accent: #f97316;
+  --color-accent-light: #fff5eb; */
 
-  /* --color-accent: #0d9488;
-  --color-accent-light: #e6f8f6; */
+  --color-accent: #0d9488;
+  --color-accent-light: #e6f8f6;
 
   /* Semantic states */
   --color-success: #16a34a;
@@ -89,7 +89,7 @@
   }
 
   .input {
-    @apply block w-full placeholder:text-gray-500 rounded-lg p-2 border border-gray-400 focus:shadow-[0_0_2px_#0069a8] focus:border-transparent outline-0;
+    @apply block w-full placeholder:text-gray-500 rounded-lg p-2 border border-line focus:shadow-[0_0_2px_#0069a8] focus:border-transparent outline-0;
   }
 
   .form {
@@ -119,5 +119,5 @@ body {
 }
 
 .ngx-pagination a:hover {
-  @apply !bg-background rounded-full;
+  @apply !bg-light rounded-full;
 }
